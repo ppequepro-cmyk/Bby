@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi Bby Romeo 🖤🌹</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Cormorant+Garamond:ital@1&family=Poppins:wght@300;400;600&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',sans-serif;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;transition:.8s;background:radial-gradient(circle at 50% 20%,#2a0a0a 0%,#000 70%)}
+  body.desbloqueado{background:linear-gradient(180deg,#1a0000,#3d0a0a,#000)}
+  .petalo{position:fixed;top:-30px;font-size:22px;animation:caer linear infinite;pointer-events:none;z-index:1;opacity:.9}
+  @keyframes caer{to{transform:translateY(110vh) rotate(720deg)}}
+  .phone{width:100%;max-width:430px;position:relative;z-index:10;animation:entrada .8s ease}
+  @keyframes entrada{from{opacity:0;transform:scale(.95) translateY(15px)}to{opacity:1;transform:scale(1) translateY(0)}}
+  .titulo{text-align:center;color:#d4af37;margin-bottom:18px}
+  .titulo small{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;display:block}
+  .titulo h1{font-family:'Playfair Display',serif;font-style:italic;font-size:48px;line-height:.9}
+  .adorno{color:#d4af37;font-size:18px;letter-spacing:3px;margin-top:6px}
+  .carta-card{background:linear-gradient(180deg,#0a0a0a,#151515);border:1px solid #d4af37;border-radius:18px;padding:30px 24px;text-align:center;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.7)}
+  .carta-card p{color:#f5e6c8;font-size:15px;line-height:1.7}
+  .carta-card .mi-amor{font-family:'Playfair Display',serif;font-style:italic;font-size:34px;color:#f5e6c8;margin:12px 0}
+  .btn-romeo{margin-top:18px;width:100%;padding:14px;border:none;border-radius:50px;cursor:pointer;background:linear-gradient(90deg,#ff0000,#8b0000);color:#ffe9a8;font-weight:700;font-size:15px;letter-spacing:1px;box-shadow:0 0 25px rgba(255,0,0,.6)}
+  #modalPass{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:50;justify-content:center;align-items:center;padding:20px}
+  #modalPass.activo{display:flex}
+  .modal-box{background:#111;border:1px solid #d4af37;border-radius:22px;padding:28px;width:100%;max-width:380px;text-align:center}
+  .modal-box h2{color:#d4af37;font-family:'Playfair Display',serif;font-style:italic;font-size:28px}
+  .modal-box p{color:#ddd;font-size:13px;margin:8px 0 15px}
+  .modal-box input{width:100%;padding:15px;font-size:20px;text-align:center;letter-spacing:8px;color:white;background:#222;border:1px solid #d4af37;border-radius:14px;outline:none}
+  .error{color:#ff8a8a;font-size:13px;margin-top:10px;display:none}
+  #cartaAbierta{display:none}
+  #cartaAbierta .carta-card{background:linear-gradient(180deg,#fff8e7,#ffedd5);border-color:#b8860b}
+  #cartaAbierta .carta-card p{color:#3d1a00}
+  #cartaAbierta .carta-card .mi-amor{color:#8b0000}
+  /* REPRODUCTOR BONITO - SIN ERROR */
+  .player{margin-top:16px;background:#1a0000;border:1px solid #d4af37;border-radius:16px;padding:14px}
+  .player .song{color:#ffd700;font-weight:600;font-size:14px}
+  .player .artist{color:#ccc;font-size:12px}
+  .player button{margin-top:10px;width:100%;padding:12px;border:none;border-radius:50px;background:#d4af37;color:#000;font-weight:800;cursor:pointer;font-size:14px}
+  .player a{display:block;margin-top:8px;color:#ff8a8a;font-size:12px;text-decoration:underline}
+  audio{width:100%;margin-top:10px;filter:invert(1)}
+</style>
+</head>
+<body>
+
+<div class="phone" id="portada">
+  <div class="titulo"><small>Para mi</small><h1>BEBE</h1><div class="adorno">✦ ── 🌹 ── ✦</div></div>
+  <div class="carta-card">
+    <p style="color:#d4af37;">Una carta para ti...</p>
+    <div class="mi-amor">Mi amor,</div>
+    <p>Desde que te conocí,<br>mi corazón late versos de ti.<br>En este silencio de la noche,<br>solo pienso en nosotros.</p>
+    <div style="font-size:28px;margin:10px 0;">🌹</div>
+    <button class="btn-romeo" onclick="pedirPass()">❤️ LEER LA CARTA</button>
+    <p style="font-size:11px;opacity:.6;margin-top:10px;">🎵 BBY ROMEO - rusowsky</p>
+  </div>
+</div>
+
+<div class="phone" id="cartaAbierta">
+  <div class="titulo"><small style="color:#ffd700;">Para mi</small><h1 style="color:#fff;">VIDA</h1><div class="adorno">✦ ── 🌹 ── ✦</div></div>
+  <div class="carta-card">
+    <p style="color:#8b0000;font-weight:600;">✨ CARTA DESBLOQUEADA ✨</p>
+    <div class="mi-amor">Mi CIELO</div>
+    <p>Hola <b>[EMMANUEL]</b>,</p>
+    <p>Hoy te escribo esto porque eres mi persona favorita. Eres fuerte, eres noble, eres mi calma y mi locura al mismo tiempo.</p>
+    <p>Gracias por existir, por hacerme reír, por estar ahí incluso cuando no lo dices. Tú eres mi Romeo, mi historia favorita.</p>
+    <p>Que nunca te falte amor, salud y motivos para sonreír. Yo siempre voy a estar aquí para ti.</p>
+    <p style="font-weight:700;text-align:center;margin-top:14px;">Con todo mi amor,<br>[CIELO] 🌹</p>
+    <div style="font-size:24px;margin-top:10px;">🖤 🌹 ✨ 💌</div>
+
+    <!-- REPRODUCTOR SIN ERROR DE YOUTUBE -->
+    <div class="player">
+      <div class="song">🎵 BBY ROMEO</div>
+      <div class="artist">rusowsky x Ralphie Choo</div>
+      <!-- Si subes el mp3 a GitHub con nombre bby-romeo.mp3, suena solo -->
+      <audio id="musica" controls loop preload="auto">
+        <source src="bby-romeo.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="sonar()">▶ REPRODUCIR </button>
+      <a href="https://www.youtube.com/watch?v=E5WJ5p3Fu_s" target="_blank">❤️</a>
+    </div>
+
+  </div>
+</div>
+
+<div id="modalPass">
+  <div class="modal-box">
+    <div style="font-size:42px;">🔒🌹</div>
+    <h2>¿Eres mi Romeo?</h2>
+    <p>Escribe nuestra contraseña secreta</p>
+    <input type="password" id="pass" placeholder="••••">
+    <button class="btn-romeo" onclick="verificar()">DESBLOQUEAR 💌</button>
+    <div class="error" id="error">Contraseña incorrecta 🥺</div>
+    <p style="font-size:12px;color:#888;margin-top:12px;">Pista: Es nuestra fecha ❤️<br>Prueba: 1911</p>
+    <button onclick="cerrarModal()" style="background:none;border:none;color:#888;text-decoration:underline;cursor:pointer;margin-top:10px;">Cerrar</button>
+  </div>
+</div>
+
+<script>
+  const CONTRASENA = "1911";
+  function pedirPass(){ document.getElementById('modalPass').classList.add('activo'); setTimeout(()=>document.getElementById('pass').focus(),100); }
+  function cerrarModal(){ document.getElementById('modalPass').classList.remove('activo'); }
+  function sonar(){
+    const m=document.getElementById('musica');
+    m.volume=1;
+    m.play().catch(()=>{ window.open('https://www.youtube.com/watch?v=E5WJ5p3Fu_s','_blank'); });
+  }
+  function verificar(){
+    const valor=document.getElementById('pass').value.trim();
+    if(valor===CONTRASENA){
+      cerrarModal();
+      document.body.classList.add('desbloqueado');
+      document.getElementById('portada').style.display='none';
+      document.getElementById('cartaAbierta').style.display='block';
+      sonar();
+      lanzarConfetti();
+    } else {
+      document.getElementById('error').style.display='block';
+    }
+  }
+  document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter') verificar();});
+  function lanzarConfetti(){
+    const emojis=['🌹','🖤','✨','💌','❤️'];
+    for(let i=0;i<40;i++){ setTimeout(()=>{ const s=document.createElement('div'); s.style.cssText=`position:fixed;top:-20px;left:${Math.random()*100}vw;font-size:22px;z-index:100;pointer-events:none;animation:caer 3s linear forwards`; s.textContent=emojis[Math.floor(Math.random()*emojis.length)]; document.body.appendChild(s); setTimeout(()=>s.remove(),3500); }, i*60); }
+  }
+  setInterval(()=>{ const p=document.createElement('div'); p.className='petalo'; p.textContent=Math.random()>0.5?'🌹':'🥀'; p.style.left=Math.random()*100+'vw'; p.style.animationDuration=(4+Math.random()*4)+'s'; document.body.appendChild(p); setTimeout(()=>p.remove(),8000); },900);
+</script>
+</body>
+</html>
